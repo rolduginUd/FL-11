@@ -1,0 +1,226 @@
+@mixin buttonStyles{
+    padding: 10px 30px;
+    background-color: $buttonColor;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+@mixin textUnderline {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    content: '';
+    background: $underlineColor;
+}
+@mixin positionUnderline {
+    position: relative;
+    z-index: 0;
+}
+@mixin logo($textColor: #ffffff) {
+    display: flex;
+    font-family: $fontVariant2;
+
+    img{
+        height: 40px;
+        width: 40px;
+    }
+
+    p{
+        display: flex;
+        flex-flow: column wrap;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0 0 0 15px;
+        color: $textColor;
+
+        span{
+            font-size: 10px;
+            font-weight: normal;
+            margin: auto;
+        }
+    }
+}
+
+body{
+    font-family: $fontVariant1;
+    background-color: $bodyBG;
+    max-width: 1366px;
+    margin: auto;
+
+    header{
+        background-image: map-get($mapping, headerBG);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        border: 1px solid transparent;
+        border-radius: 0 0 400px/200px 0;
+    }
+}
+
+.header-wrap{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    .landing-logo{
+        @include logo($textColor: $textColor);
+    }
+
+    .header_heading{
+        position: relative;
+        font-size: 40px;
+        width: 30%;
+        font-weight: bold;
+        color: $textColor;
+        z-index: 0;
+
+        &::after{
+            @include textUnderline();
+            width: 170px;
+            height: 15px;
+            z-index: -1;
+        }
+    }
+    
+    .header_button{
+        @include buttonStyles();
+    }
+
+    .header_text{
+        width: 50%;
+        color: $textColor;
+        font-family: $fontVariant2;
+    }
+}
+
+main{
+    .section_text{
+        text-align: center;
+        color: $textColor;
+        font-size: 30px;
+        font-weight: bold;
+        @include positionUnderline();
+
+        &::after{
+            @include textUnderline();
+            width: 140px;
+            height: 15px;
+            z-index: -1;
+            left: 680px;
+        }
+    }
+    .section_card_wrap{
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: center;
+        justify-content: space-around;
+
+        div:nth-child(2){
+            margin-left: -220px;
+            margin-right: -220px;
+        }
+
+        .section_card{
+            display: flex;
+            flex-flow: column wrap;
+            width: 25%;
+            background-color: $cardSectionColor;
+            border: 10px solid $cardSectionColor;
+
+            .section_card_heading{
+                color: white;
+                font-size: 20px;
+                z-index: 5;
+                @include positionUnderline();
+                width: fit-content;
+                margin: auto;
+                font-weight: 600;
+
+                &::after{
+                    @include textUnderline();
+                    width: 100%;
+                    height: 15px;
+                    z-index: -1;
+                    top: 15px;
+                }
+            }
+
+            .section_card_text{
+                color: $cardSectionTextColor;
+                font-family: $fontVariant2;
+            }
+        }
+    }
+
+    .section_banner{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        width: 700px;
+        margin: 50px auto;
+        position: relative;
+        top: 110px;
+        background: map-get($mapping, lanierBg);
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        
+
+        .section_banner_heading{
+            color: $textColor;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 0;
+            z-index: 5;
+            @include positionUnderline();
+            width: fit-content;
+
+            &::after{
+                @include textUnderline();
+                width: 15%;
+                height: 15px;
+                z-index: -1;
+                top: 20px;
+                left: 123px;
+            }
+        }
+        .section_banner_text{
+            color: $cardSectionTextColor;
+            font-family: $fontVariant2;
+        }
+
+        .section_banner_button{
+            @include buttonStyles();
+        }
+    }
+}
+
+footer{
+    font-family: $fontVariant2;
+    .footer-wrap{
+        @extend .header-wrap;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        background: $cardSectionColor;
+        height: 120px;
+        padding-top: 80px;
+        justify-content: space-around;
+        align-items: center;
+        color: $footerColorText;
+
+        .landing-logo{
+            @include logo();
+        }
+        
+        div,
+        p,
+        span{
+            height: fit-content;
+        }
+
+        .footer_text{
+            width: 25%;
+        }
+    }
+}

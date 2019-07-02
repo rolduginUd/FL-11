@@ -1,0 +1,470 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;
+} */
+
+body {
+  font-family: roboto;
+  max-width: 1400px;
+  margin: auto;
+  background: #0b192f;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+header{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #162b4d;
+  height: 115px;
+}
+
+.burger{
+  display: none;
+}
+.burger div{
+  height: 1px;
+  width: 15px;
+  margin-top: 5px;
+  background: #ffffff;
+}
+
+header p{
+  color: #ffffff;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+header p span{
+  color: #d12767;
+}
+
+.navigation{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 400px;
+  margin-right: 90px;
+}
+
+.navigation a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1vw;
+  width: 20%;
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.navigation a:hover{
+  background-color: #637693;
+}
+
+.leftColumn{
+  display: flex;
+  flex-flow: column wrap;
+  width: 1040px;
+  margin-left: 0;
+}
+
+.leftColumn .rowMain:nth-child(1){
+  background-color: #B71757;
+}
+
+.leftColumn .rowMain:nth-child(2){
+  background-color: #0D7E71
+}
+
+.leftColumn .rowMain:nth-child(3){
+  background-color: #b1660e;
+}
+
+.leftColumn .rowMain:nth-child(4){
+  background-color: #B71757;
+}
+
+.info img:hover,
+.templateType1:hover{
+  opacity: 0.5;
+}
+
+.rowMain{
+  width: 100%;
+}
+
+main{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.info{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.info img{
+  width: 50%;
+}
+
+.templateType1{
+  width: 50%;
+  color: #ffffff;
+}
+
+.date{
+  text-align: center;
+  width: fit-content;
+  font-size: 30px;
+  float: right;
+  opacity: 0.4;
+  font-weight: 200;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.date span{
+  font-size: 60px;
+}
+
+.templateType1 h1{
+  width: 55%;
+  font-size: 50px;
+  font-weight: 200;
+  line-height: 50px;
+  margin-left: 35px;
+}
+
+.templateType1 p{
+  width: 75%;
+  font-size: 18px;
+  opacity: 0.7;
+  font-weight: 300;
+  line-height: 30px;
+  margin-left: 35px;
+}
+
+.type2{
+  text-align: right;
+  padding: 0 40px 0 20px;
+}
+
+.type2 .date{
+  float: left;
+}
+
+.type2 h1{
+  margin-left: auto;
+}
+
+.type2 p{
+  margin-left: auto;
+}
+
+#picturewtf{
+  width: 520px;
+}
+
+.footerMain{
+  height: 230px;
+  background-color: #2d95bb;
+  padding: 0 0 0 40px;
+  color: #ffffff;
+}
+
+.footerMain h1{
+  font-size: 55px;
+  font-weight: 200;
+}
+
+.footerMain p{
+  width: 80%;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+footer{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 35px 0 35px;
+  background-color: #162b4d;
+  color: #637693
+}
+.news{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 330px;
+  height: 505px;
+  background-color: #ffffff;
+}
+.news img{
+  height: 30.5%;
+  width: 330px;
+}
+
+.rightColumn div:nth-child(2) img{
+  width: 100%;
+}
+
+.news h1{
+  width: 70%;
+  margin-top: 35px;
+  font-weight: 300;
+}
+.news p{
+  width: 72%;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.rightColumn div:nth-child(2){
+  margin-top: 25px;
+}
+
+
+@media (max-width: 768px){
+
+  header{
+    display: flex;
+    flex-flow: column wrap;
+    width: 97%;
+    height: 240px;
+    margin: auto;
+  }
+
+  .burger{
+    margin-top: 50px;
+    display: block;
+  }
+
+  header p{
+    margin: auto;
+  }
+
+  .navigation{
+    display: none;
+  }
+
+  main{
+    width: 97%;
+    margin: auto;
+  }
+
+  .info{
+    flex-flow: column wrap;
+  }
+
+  .info img{
+    width: 100%;
+  }
+
+  .leftColumn{
+    width: 53%;
+  }
+
+  .rightColumn{
+    width: 44.5%;
+  }
+
+  .templateType1{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .type2 {
+    width: 100%;
+    padding: unset;
+
+  }
+
+  .templateType1 h1{
+    font-size: 40px;
+    width: 80%;
+  }
+
+  .templateType1 p{
+    font-size: 14px;
+    line-height: 20px;
+    width: 85%;
+  }
+
+  .date{
+    order: 1;
+    float: unset;
+    margin: 15px auto 25px;
+  }
+
+  .type2 h1{
+    width: 70%;
+    margin-left: 35px;
+    text-align: left;
+  }
+
+  .type2 p{
+    width: 80%;
+    margin-left: 35px;
+    text-align: left;
+  }
+
+  .news h1{
+    font-size: 25px;
+  }
+
+  .leftColumn div:nth-child(2) .info img{
+    order: -1;
+  }
+
+  .leftColumn div:nth-child(4) .info img{
+    order: -1;
+  }
+
+  .footerMain{
+    display: flex;
+    flex-flow: column;
+    height: fit-content;
+  }
+
+  .footerMain .date{
+    font-size: 35px;
+    margin: 25px 0 20px 130px;
+  }
+
+  .footerMain .date span{
+    font-size: 55px
+  }
+
+  .footerMain h1{
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .footerMain p{
+    font-size: 11px;
+  }
+  
+  footer{
+    flex-flow: column;
+    text-align: center;
+  }
+
+  footer p:nth-child(2){
+    margin-top: -10px;
+  }
+
+  .changeFooter{
+    width: 20%;
+    margin-top: -10px;
+  }
+
+}
+
+
+@media (max-width: 480px){
+  main{
+    flex-flow: column wrap;
+  }
+
+  .leftColumn{
+    width: 100%;
+  }
+
+ .rightColumn{
+   width: 100%;
+ }
+
+ .news{
+   width: 100%;
+ }
+
+ .news img{
+   width: 100%;
+ }
+
+ .templateType1 h1{
+   width: 60%;
+ }
+
+ footer{
+   text-align: center;
+   padding: 25px 0 20px 0;
+ }
+ footer p{
+   font-size: 18px;
+ }
+ 
+ .footerMain{
+   padding: 0 0 0 35px;
+ }
+
+ .changeFooter{
+   width: 30%;
+ }
+
+ footer div p:nth-child(2){
+   width: 100%;
+   margin-left: unset;
+  }
+
+  .footerMain h1{
+    font-size: 45px;
+    line-height: 45px;
+    width: 80%;
+  }
+
+  .footerMain .date{
+    margin-left: 170px;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+
+
+  .footerMain p{
+    width: 85%;
+    font-size: 14px;
+  }
+
+
+ .news{
+  height: fit-content;;
+ }
+
+ .news h1{
+   font-size: 27px;
+   width: 85%;
+   margin-bottom: -5px;
+ }
+
+ .news p{
+   font-size: 14px;
+   width: 85%;
+   margin-bottom: 25px;
+ }
+
+}

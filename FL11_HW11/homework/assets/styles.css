@@ -1,0 +1,90 @@
+body{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #e7ebf0;
+    color: #41b5fe;
+}
+header{
+    width: 45%;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+    padding-bottom: 25px;
+}
+.firstActionContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.firstActionContainer input{
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: -25px;
+}
+hr{
+    background-color: #e4f2fe;
+    height: 5px;
+    border: none;
+    width: 91%;
+}
+.firstActionContainer i{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #c8d0d8;
+    margin-left: 15px;
+}
+a{
+    display: flex;
+    align-self: center;
+    text-decoration: none;
+}
+/* .firstActionContainer i:hover{
+    color: #41b5fe;
+}
+.firstActionContainer i:active{
+    color: #1f5b81;
+} */
+#root{
+    display: flex;
+    flex-flow: column wrap;
+    width: 91%;
+    margin: auto;
+    text-align: left;
+}
+#root div{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-top: 5px;
+}
+.error{
+    color: red;
+    display: none;
+}
+i:hover{
+    cursor: pointer;
+}
+.removeIcn{
+    margin-left: auto;
+}
+.itemsLabel{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.checkBox{
+    padding: 35px;
+}
+#itemId{
+    padding: 8px 15px;;
+}
+.test{
+    height: 10px;
+}
+.added_ico_checkbox {
+    cursor: pointer;
+    color: #c8d0d8;
+    font-size: 30px;
+}

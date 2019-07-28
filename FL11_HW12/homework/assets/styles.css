@@ -1,0 +1,30 @@
+body{
+    padding: 0;
+}
+
+.alignItems{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+input{
+    border-radius: 8px;
+}
+.startPage input{
+    padding: 10px 25px;
+}
+.addNewTask{
+    width: 10%;
+}
+.newTask{
+    padding: 8px;
+}
+ul{
+    list-style-type: none;
+}
+.liStyles{
+    width: 300px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
